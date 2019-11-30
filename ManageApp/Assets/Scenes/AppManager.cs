@@ -69,6 +69,7 @@ public class AppManager : MonoBehaviour {
         titleImage.GetComponent<Image>().color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
 
         cameraImage = GameObject.Find("Image_Camera");
+        //cameraImage.AddComponent<Renderer>();
 
         StartCoroutine(TitleCoroutine());
     }
@@ -77,7 +78,9 @@ public class AppManager : MonoBehaviour {
     {
         float alphaValue = 1.0f;
 
-        while(alphaValue > 0)
+        yield return new WaitForSeconds(2.0f);
+
+        while (alphaValue > 0)
         {
             alphaValue = alphaValue - 0.01f;
 
@@ -87,6 +90,8 @@ public class AppManager : MonoBehaviour {
 
             yield return new WaitForSeconds(0.01f);
         }
+
+        titleImage.GetComponent<Image>().raycastTarget = false;
     }
 
     void Quit()
@@ -117,6 +122,8 @@ public class AppManager : MonoBehaviour {
 
     public void StartNetwork(int serverType)
     {
+        Debug.Log("네트워크 시작! " + serverType);
+
         System.Net.IPAddress ipAddr;
 
         if (serverType == 0)
@@ -144,7 +151,9 @@ public class AppManager : MonoBehaviour {
 
         // Buffer.BlockCopy(BitConverter.GetBytes(CLIENT_TYPE.Manager), 0, dataSendBuffer, 0, 1);
         dataSendBuffer[0] = (byte)(CLIENT_TYPE.Manager);
-        socket.Send(dataSendBuffer, 1, SocketFlags.None);
+        Buffer.BlockCopy(BitConverter.GetBytes(COMMON_PASSWORD), 0, dataSendBuffer, 1, 4);
+
+        socket.Send(dataSendBuffer, 29, SocketFlags.None);
 
         UnLock();
         isOnNetwork = true;
@@ -180,9 +189,9 @@ public class AppManager : MonoBehaviour {
         }
 
         tex = new Texture2D(300, 300, TextureFormat.RGB24, false);
-        tex.SetPixels(300, 300, 300, 300, cameraDataBuffer);
+        tex.SetPixels(0, 0, 300, 300, cameraDataBuffer);
+        cameraImage.GetComponent<Renderer>().material.mainTexture = tex;
         tex.Apply();
-        cameraImage.GetComponent<Image>().GetComponent<Renderer>().material.mainTexture = tex;
     }
 
     public void ProcessOnOff(bool isOnOff)
