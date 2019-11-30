@@ -34,7 +34,7 @@ namespace ERROR_UTIL
 
 namespace NETWORK_UTIL
 {
-	int recvn(const SOCKET& socket, char* buf, int len, int flags)
+	int recvn(SOCKET socket, char* buf, int len, int flags)
 	{
 		int received;
 		char* ptr = buf;

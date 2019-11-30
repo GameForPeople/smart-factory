@@ -18,7 +18,9 @@ namespace USING
 	using _Number = int;
 	using _Price = int;
 
-	using _Color = char[3];
+	//using _Color = char[3];
+	using _CameraDataType = char[3 * 300 * 300];
+
 }using namespace USING;
 
 namespace DEFINE
@@ -107,7 +109,7 @@ struct ChangeCamera
 
 struct CameraData
 {
-	_Color colorArr[300][300];
+	_CameraDataType colorArr;
 };
 
 #pragma pack(pop)

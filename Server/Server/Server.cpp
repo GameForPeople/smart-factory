@@ -32,6 +32,13 @@ Server::Server()
 		}
 	}
 
+	for (int i = 0; i < 90000; ++i)
+	{
+		savedCameraData.colorArr[i * 3] = 255;
+		savedCameraData.colorArr[i * 3 + 1] = 0;
+		savedCameraData.colorArr[i * 3 + 2] = 0;
+	}
+
 	Init();
 }
 
