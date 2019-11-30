@@ -79,3 +79,8 @@ namespace ERROR_UTIL
 {
 	_NORETURN void Error(const LOG_UTIL::SourceLocation& sourceLocation, const string& printLog);
 }
+
+namespace NETWORK_UTIL
+{
+	int recvn(SOCKET socket, char* buf, int len, int flags);
+}

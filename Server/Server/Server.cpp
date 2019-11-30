@@ -112,7 +112,7 @@ void Server::Run()
 			<< "  ] \n";
 
 		Auth auth;
-		recv(clientSocket, (char*)&auth, sizeof(auth), 0);
+		NETWORK_UTIL::recvn(clientSocket, (char*)&auth, sizeof(auth), 0);
 
 		if (auth.commonPassword != DEFINE::COMMON_PASSWORD)
 		{
@@ -123,7 +123,7 @@ void Server::Run()
 		if (auth.clientType == CLIENT_TYPE::Client)
 		{
 			ClientOrder clientOrder;
-			recv(clientSocket, (char*)&clientOrder, sizeof(clientOrder), 0);
+			NETWORK_UTIL::recvn(clientSocket, (char*)&clientOrder, sizeof(clientOrder), 0);
 
 			std::wprintf(L"[Client] 오더를 받았습니다. 차종 %d, 차색 %d, 타이어 %d"
 				, (int)(clientOrder.carType)
@@ -168,19 +168,19 @@ void Server::ManagerNetwork()
 	_PacketType typeBuffer{};
 	while (7)
 	{
-		recv(managerSocket, (char*)& typeBuffer, sizeof(_PacketType), 0);
+		NETWORK_UTIL::recvn(managerSocket, (char*)& typeBuffer, sizeof(_PacketType), 0);
 
 		if (typeBuffer == MANAGER_PACKET_TYPE::OnOffFactory)
 		{
 			OnOffFactory onOffFactory;
-			recv(managerSocket, (char*)& onOffFactory, sizeof(onOffFactory), 0);
+			NETWORK_UTIL::recvn(managerSocket, (char*)& onOffFactory, sizeof(onOffFactory), 0);
 
 			factoryOnOffFlag = onOffFactory.flag;
 		}
 		else if (typeBuffer == MANAGER_PACKET_TYPE::ChangeCamera)
 		{
 			ChangeCamera changeCamera;
-			recv(managerSocket, (char*)& changeCamera, sizeof(changeCamera), 0);
+			NETWORK_UTIL::recvn(managerSocket, (char*)& changeCamera, sizeof(changeCamera), 0);
 
 			savedCameraIndex = changeCamera.cameraIndex;
 		}
@@ -201,7 +201,7 @@ void Server::FactoryNetwork()
 	_PacketType typeBuffer{};
 	while (7)
 	{
-		recv(factorySocket, (char*)& typeBuffer, sizeof(_PacketType), 0);
+		NETWORK_UTIL::recvn(factorySocket, (char*)& typeBuffer, sizeof(_PacketType), 0);
 
 		if (typeBuffer == FACTORY_PACKET_TYPE::GetOnOffState)
 		{
@@ -235,7 +235,7 @@ void Server::FactoryNetwork()
 		}
 		else if (typeBuffer == FACTORY_PACKET_TYPE::CameraData)
 		{
-			recv(factorySocket, (char*)& recvedCameraData, sizeof(recvedCameraData), 0);
+			NETWORK_UTIL::recvn(factorySocket, (char*)& recvedCameraData, sizeof(recvedCameraData), 0);
 			{
 				std::unique_lock<mutex> localLock(cameraDataLock);
 				savedCameraData = recvedCameraData;
