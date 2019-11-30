@@ -16,7 +16,7 @@ public:
 private:
 	void Init();
 
-public:
+public: 
 	Server();
 	~Server();
 
