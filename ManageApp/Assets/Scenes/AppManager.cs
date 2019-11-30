@@ -182,9 +182,9 @@ public class AppManager : MonoBehaviour {
 
         for (int i = 0; i < 90000; ++i)
         {
-            cameraDataBuffer[i] = new Color( cameraDataRecvBuffer[3 * i + 0]
-                , cameraDataRecvBuffer[3 * i + 1]
-                , cameraDataRecvBuffer[3 * i + 2]
+            cameraDataBuffer[i] = new Color( cameraDataRecvBuffer[3 * i + 0] / 255
+                , cameraDataRecvBuffer[3 * i + 1] / 255
+                , cameraDataRecvBuffer[3 * i + 2] / 255
                 , 1);
         }
 

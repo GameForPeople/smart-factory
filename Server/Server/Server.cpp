@@ -34,9 +34,9 @@ Server::Server()
 
 	for (int i = 0; i < 90000; ++i)
 	{
-		savedCameraData.colorArr[i * 3] = 255;
-		savedCameraData.colorArr[i * 3 + 1] = 0;
-		savedCameraData.colorArr[i * 3 + 2] = 0;
+		savedCameraData.colorArr[i * 3] = (char)0;
+		savedCameraData.colorArr[i * 3 + 1] = (char)255;
+		savedCameraData.colorArr[i * 3 + 2] = (char)0;
 	}
 
 	Init();
@@ -44,8 +44,8 @@ Server::Server()
 
 Server::~Server()
 {
-	if (managerFlag) { closesocket(managerSocket); managerNetworkThread.join(); }
-	if (factoryFlag) { closesocket(factorySocket); factoryNetworkThread.join(); }
+	// if (managerFlag) { closesocket(managerSocket); managerNetworkThread.join(); }
+	// if (factoryFlag) { closesocket(factorySocket); factoryNetworkThread.join(); }
 }
 
 void Server::Init()
@@ -148,7 +148,10 @@ void Server::Run()
 			{
 				std::cout << "[Manager] 매니저 연결 성공\n";
 				managerSocket = clientSocket;
+
+				if (managerNetworkThread.joinable()) { managerNetworkThread.join(); }
 				managerNetworkThread = std::thread([&]{ this->ManagerNetwork(); });
+				//managerNetworkThread.detach();
 			}
 			else { closesocket(clientSocket); }
 		}
@@ -159,7 +162,10 @@ void Server::Run()
 			{
 				std::cout << "[Factory] 팩토리 연결 성공\n";
 				factorySocket = clientSocket;
+				
+				if (factoryNetworkThread.joinable()) { factoryNetworkThread.join(); }
 				factoryNetworkThread = std::thread([&] { this->FactoryNetwork(); });
+				//factoryNetworkThread.detach();
 			}
 			else { closesocket(clientSocket); }
 		}
@@ -175,7 +181,15 @@ void Server::ManagerNetwork()
 	_PacketType typeBuffer{};
 	while (7)
 	{
-		NETWORK_UTIL::recvn(managerSocket, (char*)& typeBuffer, sizeof(_PacketType), 0);
+		if (auto retValue = NETWORK_UTIL::recvn(managerSocket, (char*)&typeBuffer, sizeof(_PacketType), 0)
+			; retValue < 0)
+		{
+			// -2 Client End , -1 Socket Error
+			closesocket(managerSocket);
+			managerFlag = false;
+			std::cout << "[Manager] 매니저 연결 종료\n";
+			return;
+		}
 
 		if (typeBuffer == MANAGER_PACKET_TYPE::OnOffFactory)
 		{
@@ -208,7 +222,15 @@ void Server::FactoryNetwork()
 	_PacketType typeBuffer{};
 	while (7)
 	{
-		NETWORK_UTIL::recvn(factorySocket, (char*)& typeBuffer, sizeof(_PacketType), 0);
+		if (auto retValue = NETWORK_UTIL::recvn(factorySocket, (char*)&typeBuffer, sizeof(_PacketType), 0)
+			; retValue < 0)
+		{
+			// -2 Client End , -1 Socket Error
+			closesocket(factorySocket);
+			factoryFlag = false;
+			std::cout << "[Factory] 팩토리 연결 종료\n";
+			return;
+		}
 
 		if (typeBuffer == FACTORY_PACKET_TYPE::GetOnOffState)
 		{

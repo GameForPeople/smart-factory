@@ -45,7 +45,7 @@ namespace NETWORK_UTIL
 		{
 			if (received = recv(socket, ptr, left, flags)
 				; received == SOCKET_ERROR) { return SOCKET_ERROR; }
-			else if (received == 0) { break; }
+			else if (received == 0) { return -2; }
 
 			left -= received;
 			ptr += received;
