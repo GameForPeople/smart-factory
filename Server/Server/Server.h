@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Protocol.hh"
+#include "../../Protocol.hh"
 
 class Server
 {

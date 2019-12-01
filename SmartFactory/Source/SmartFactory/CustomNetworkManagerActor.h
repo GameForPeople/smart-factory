@@ -2,9 +2,36 @@
 
 #pragma once
 
+// c++ Header
+#include <thread>
+#include <string>
+#include <mutex>
+
+// ppl
+#include <concurrent_queue.h>
+
+// Windows
+#define WIN32_LEAN_AND_MEAN
+#include <Windows.h>
+
+#define _WINSOCK_DEPRECATED_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
+#pragma comment(lib, "ws2_32")
+#pragma comment(lib, "wininet.lib")
+
+#include <winsock2.h>
+
+#include "../../Protocol.hh"
+
+// unreal!
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "CustomNetworkManagerActor.generated.h"
+
+namespace NETWORK_UTIL
+{
+	int recvn(SOCKET socket, char* buf, int len, int flags);
+}
 
 UCLASS()
 class SMARTFACTORY_API ACustomNetworkManagerActor : public AActor
@@ -22,4 +49,46 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+/////////////////////////////// My Function
+private:
+	const int COMMON_PASSWORD = 19942019;
+	const unsigned short SERVER_LISTEN_PORT = 9000;
+	const std::string PUBLIC_SERVER_IP = "13.125.73.63";
+	const std::string LOCAL_HOST_IP = "127.0.0.1";
+
+public:
+	UFUNCTION(BlueprintCallable, Category = "FACTORY_NETWORK")
+	void StartNetwork(bool isUsePublicIP);
+	
+	void NetworkFunction();
+
+public:
+	//Message Function
+	void DoFactoryOnOff(_Flag factoryOnOffFlag);
+	void DoFactoryOrder(ClientOrder clientOrder);
+	void DoFactoryChangeCameraIndex(_Index clientOrder);
+	
+	UFUNCTION(BlueprintCallable, Category = "FACTORY_NETWORK")
+	void AddFactoryOnOff();
+
+	UFUNCTION(BlueprintCallable, Category = "FACTORY_NETWORK")
+	void AddFactoryOrder();
+
+	UFUNCTION(BlueprintCallable, Category = "FACTORY_NETWORK")
+	void AddFactoryCameraIndex();
+
+	UFUNCTION(BlueprintCallable, Category = "FACTORY_NETWORK")
+	void AddFactoryCameraData();
+
+private:
+	std::thread networkThread;
+	SOCKET socket;
+	std::mutex networkLock;
+
+	concurrency::concurrent_queue<_PacketType> packetQueue;
+
+	_Flag factoryOnOffFlag;
+	_Index cameraIndex;
+	_CameraDataType cameraData;
 };
