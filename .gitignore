@@ -1,6 +1,12 @@
 #Custom
 Resource/
-SmartFactory/
+SmartFactory/.vs/
+SmartFactory/Binaries/
+SmartFactory/Build/
+SmartFactory/Config/
+SmartFactory/Content/
+SmartFactory/Intermediate/
+SmartFactory/Saved/
 
 # VS And Unreal And Unity 
 
