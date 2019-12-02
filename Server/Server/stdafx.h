@@ -84,3 +84,11 @@ namespace NETWORK_UTIL
 {
 	int recvn(SOCKET socket, char* buf, int len, int flags);
 }
+
+namespace UNICODE_UTIL
+{
+	void SetLocaleToKorean();
+
+	_NODISCARD std::string WStringToString(const std::wstring& InWstring);
+	_NODISCARD std::wstring StringToWString(const std::string& InString);
+}

@@ -3,6 +3,7 @@
 
 int main()
 {
+	UNICODE_UTIL::SetLocaleToKorean();
 	std::unique_ptr<Server> server = std::make_unique<Server>();
 	server->Run();
 

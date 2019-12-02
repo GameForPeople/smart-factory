@@ -54,3 +54,39 @@ namespace NETWORK_UTIL
 		return (len - left);
 	}
 }
+
+namespace UNICODE_UTIL
+{
+	void SetLocaleToKorean()
+	{
+		_wsetlocale(LC_ALL, L"Korean");
+
+		auto oldLocale = std::wcout.imbue(std::locale("korean"));
+	}
+
+	_NODISCARD std::string WStringToString(const std::wstring& InWString)
+	{
+		const int sizeBuffer = WideCharToMultiByte(CP_ACP, 0, &InWString[0], -1, NULL, 0, NULL, NULL);
+
+		std::string retString(sizeBuffer, 0);
+
+		WideCharToMultiByte(CP_ACP, 0, &InWString[0], -1, &retString[0], sizeBuffer, NULL, NULL);
+
+		// FixError ==
+		retString.pop_back(); //(retString.end(), retString.end());
+		//retString.insert(retString.end(), '\0');
+
+		return retString;
+	}
+
+	_NODISCARD std::wstring StringToWString(const std::string& InString)
+	{
+		const int sizeBuffer = MultiByteToWideChar(CP_ACP, 0, &InString[0], -1, NULL, 0);
+
+		std::wstring retString(sizeBuffer, 0);
+
+		MultiByteToWideChar(CP_ACP, 0, &InString[0], -1, &retString[0], sizeBuffer);
+
+		return retString;
+	}
+}
