@@ -16,7 +16,7 @@
     <ClInclude Include="Server.h">
       <Filter>Server</Filter>
     </ClInclude>
-    <ClInclude Include="Protocol.hh">
+    <ClInclude Include="..\..\Protocol.hh">
       <Filter>Define</Filter>
     </ClInclude>
   </ItemGroup>

@@ -79,10 +79,10 @@ struct ClientOrder
 	_TireType tireType;
 	
 	//others
-	_Name name;
-	_Address addr;
-	_Number number;
-	_Price price;
+	// _Name name;
+	// _Address addr;
+	// _Number number;
+	// _Price price;
 };
 
 struct AnswerToClient

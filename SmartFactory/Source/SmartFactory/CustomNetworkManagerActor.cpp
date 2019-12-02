@@ -1,12 +1,15 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "CustomNetworkManagerActor.h"
+#include "CustomNetworkProcesser.h"
 
 // Sets default values
 ACustomNetworkManagerActor::ACustomNetworkManagerActor()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
+	customClientInfo = CreateDefaultSubobject<ACustomClientInfo>(TEXT("CUSTOM_CLIENT_INFO"));
+	threadEnd = false;
 }
 
 // Called when the game starts or when spawned
@@ -75,6 +78,7 @@ void ACustomNetworkManagerActor::StartNetwork(bool isUsePublicIP)
 	if (retVal == SOCKET_ERROR) { UE_LOG(LogTemp, Fatal, TEXT("Connect Fail")); }
 #pragma endregion
 
+	UE_LOG(LogTemp, Display, TEXT("Start Custom Network Thread!"));
 	{
 		std::lock_guard<std::mutex> localLock(networkLock);
 		Auth auth;
@@ -83,6 +87,15 @@ void ACustomNetworkManagerActor::StartNetwork(bool isUsePublicIP)
 		send(socket, (char*)&auth, sizeof(auth), 0);
 	}
 	networkThread = std::thread([&] { this->NetworkFunction(); });
+}
+
+void ACustomNetworkManagerActor::EndNetwork()
+{
+	threadEnd = true;
+	if (networkThread.joinable()) { networkThread.join(); }
+	std::this_thread::sleep_for(std::chrono::seconds(2));
+
+	closesocket(socket);
 }
 
 void ACustomNetworkManagerActor::NetworkFunction()
@@ -111,7 +124,8 @@ void ACustomNetworkManagerActor::NetworkFunction()
 			if (factoryOnOffFlag != onoffFactory.flag)
 			{
 				factoryOnOffFlag = onoffFactory.flag;
-				DoFactoryOnOff(factoryOnOffFlag);
+				//DoFactoryOnOff(factoryOnOffFlag);
+				customNetworkProcesserInst->jobQueue.push(popedType);
 			}
 		}
 		else if (popedType == FACTORY_PACKET_TYPE::GetOrder)
@@ -124,7 +138,9 @@ void ACustomNetworkManagerActor::NetworkFunction()
 
 			if (orderInfo.flag == 0) { continue; }
 
-			DoFactoryOrder(orderInfo.clientOrder);
+			//DoFactoryOrder(orderInfo.clientOrder);
+			std::memcpy(&customClientInfo, &(orderInfo.clientOrder), sizeof(orderInfo.clientOrder));
+			customNetworkProcesserInst->jobQueue.push(popedType);
 		}
 		else if (popedType == FACTORY_PACKET_TYPE::GetCameraIndex)
 		{
@@ -137,7 +153,8 @@ void ACustomNetworkManagerActor::NetworkFunction()
 			if (cameraIndex != changeCamera.cameraIndex)
 			{
 				cameraIndex = changeCamera.cameraIndex;
-				DoFactoryOnOff(cameraIndex);
+				//DoFactoryOnOff(cameraIndex);
+				customNetworkProcesserInst->jobQueue.push(popedType);
 			}
 		}
 		else if (popedType == FACTORY_PACKET_TYPE::CameraData)
@@ -145,23 +162,16 @@ void ACustomNetworkManagerActor::NetworkFunction()
 			// Send Packet Type
 			send(socket, (char*)&cameraData, sizeof(cameraData), 0);
 		}
+
+		if (threadEnd) { break; }
 	}
 }
 
-void ACustomNetworkManagerActor::DoFactoryOnOff(_Flag factoryOnOffFlag)
+void ACustomNetworkManagerActor::SetCustomNetworkProcesserInst(ACustomNetworkProcesser* pCustomNetworkProcesserInst)
 {
-
+	customNetworkProcesserInst = pCustomNetworkProcesserInst;
 }
 
-void ACustomNetworkManagerActor::DoFactoryOrder(ClientOrder clientOrder)
-{
-
-}
-
-void ACustomNetworkManagerActor::DoFactoryChangeCameraIndex(_Index clientOrder)
-{
-
-}
 
 void ACustomNetworkManagerActor::AddFactoryOnOff()
 {

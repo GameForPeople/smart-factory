@@ -21,6 +21,7 @@
 
 #include <winsock2.h>
 
+#include "CustomClientInfo.h"
 #include "../../Protocol.hh"
 
 // unreal!
@@ -32,6 +33,8 @@ namespace NETWORK_UTIL
 {
 	int recvn(SOCKET socket, char* buf, int len, int flags);
 }
+
+class ACustomNetworkProcesser;
 
 UCLASS()
 class SMARTFACTORY_API ACustomNetworkManagerActor : public AActor
@@ -61,14 +64,18 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "FACTORY_NETWORK")
 	void StartNetwork(bool isUsePublicIP);
 	
+	UFUNCTION(BlueprintCallable, Category = "FACTORY_NETWORK")
+	void EndNetwork();
+
 	void NetworkFunction();
 
+	UPROPERTY(EditAnywhere)
+	ACustomNetworkProcesser* customNetworkProcesserInst;
+
+	UFUNCTION(BlueprintCallable, Category = "FACTORY_NETWORK")
+	void SetCustomNetworkProcesserInst(ACustomNetworkProcesser* pCustomNetworkProcesserInst);
 public:
-	//Message Function
-	void DoFactoryOnOff(_Flag factoryOnOffFlag);
-	void DoFactoryOrder(ClientOrder clientOrder);
-	void DoFactoryChangeCameraIndex(_Index clientOrder);
-	
+
 	UFUNCTION(BlueprintCallable, Category = "FACTORY_NETWORK")
 	void AddFactoryOnOff();
 
@@ -88,7 +95,11 @@ private:
 
 	concurrency::concurrent_queue<_PacketType> packetQueue;
 
+public:
 	_Flag factoryOnOffFlag;
 	_Index cameraIndex;
 	_CameraDataType cameraData;
+	ACustomClientInfo* customClientInfo;
+
+	std::atomic<bool> threadEnd;
 };
