@@ -40,6 +40,7 @@ public class AppManager : MonoBehaviour {
 
     GameObject titleImage;
     GameObject cameraImage;
+    GameObject loginImage;
 
     Texture2D tex;
 
@@ -70,6 +71,9 @@ public class AppManager : MonoBehaviour {
 
         cameraImage = GameObject.Find("Image_Camera");
         //cameraImage.AddComponent<Renderer>();
+
+        loginImage = GameObject.Find("OnOff_Login").transform.Find("LOGIN_UI").gameObject;
+        loginImage.SetActive(true);
 
         StartCoroutine(TitleCoroutine());
     }
@@ -122,6 +126,8 @@ public class AppManager : MonoBehaviour {
 
     public void StartNetwork(int serverType)
     {
+        loginImage.SetActive(false);
+
         Debug.Log("네트워크 시작! " + serverType);
 
         System.Net.IPAddress ipAddr;
