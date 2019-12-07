@@ -18,11 +18,17 @@ void ACustomNetworkManagerActor::BeginPlay()
 	Super::BeginPlay();
 }
 
+//void ACustomNetworkManagerActor::EndPlay(const EEndPlayReason::Type EndPlayReason)
+//{
+//	EndNetwork();
+//	Super::EndPlay(EndPlayReason);
+//}
+
 // Called every frame
-void ACustomNetworkManagerActor::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-}
+//void ACustomNetworkManagerActor::Tick(float DeltaTime)
+//{
+//	Super::Tick(DeltaTime);
+//}
 
 /////////////////////////////My Function
 
@@ -86,20 +92,38 @@ void ACustomNetworkManagerActor::StartNetwork(bool isUsePublicIP)
 		auth.commonPassword = COMMON_PASSWORD;
 		send(socket, (char*)&auth, sizeof(auth), 0);
 	}
+	// if (networkThread.joinable()) { networkThread.join(); }
 	networkThread = std::thread([&] { this->NetworkFunction(); });
+	networkThread.detach();
 }
 
 void ACustomNetworkManagerActor::EndNetwork()
 {
+	UE_LOG(LogTemp, Log, TEXT("End-0"));
+
+	// std::thread tempThreadForJoin = std::thread([&]() {
+	// 	if (networkThread.joinable()) { networkThread.join(); }
+	// 	UE_LOG(LogTemp, Log, TEXT("End-1"));
+	// });
+
+	UE_LOG(LogTemp, Log, TEXT("End-2"));
 	threadEnd = true;
-	if (networkThread.joinable()) { networkThread.join(); }
-	std::this_thread::sleep_for(std::chrono::seconds(2));
+	UE_LOG(LogTemp, Log, TEXT("End-3"));
+
+	std::this_thread::sleep_for(std::chrono::seconds(1));
+	UE_LOG(LogTemp, Log, TEXT("End-4"));
+
+	// if (tempThreadForJoin.joinable()) { tempThreadForJoin.join(); 	UE_LOG(LogTemp, Log, TEXT("End-5")); }
 
 	closesocket(socket);
+
+	UE_LOG(LogTemp, Log, TEXT("End-5"));
 }
 
 void ACustomNetworkManagerActor::NetworkFunction()
 {
+	threadEnd = false;
+	
 	_PacketType popedType;
 
 	while (7)
@@ -159,6 +183,8 @@ void ACustomNetworkManagerActor::NetworkFunction()
 		}
 		else if (popedType == FACTORY_PACKET_TYPE::CameraData)
 		{
+			// customNetworkProcesserInst->CopyData();
+
 			// Send Packet Type
 			send(socket, (char*)&cameraData, sizeof(cameraData), 0);
 		}

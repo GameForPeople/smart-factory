@@ -13,6 +13,13 @@
 #include "CustomClientInfo.h"
 #include "../../Protocol.hh"
 
+#include "Engine/Texture.h"
+#include "Engine/Texture2D.h"
+#include "Engine/Texture2DDynamic.h"
+#include "Engine/TextureRenderTarget2D.h"
+
+#include "Components/SceneCaptureComponent2D.h"
+
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "CustomNetworkProcesser.generated.h"
@@ -42,6 +49,15 @@ public:
 	UPROPERTY(EditAnywhere)
 	ACustomNetworkManagerActor* customNetworkManagerActorInst;
 	
+	UPROPERTY(EditAnywhere)
+	UTextureRenderTarget2D* textureRenderTarget;
+	
+	UPROPERTY(EditAnywhere)
+	UTexture2D* texture2DInst;
+
+	//UPROPERTY(EditAnywhere)
+	//USceneCaptureComponent2D* sceneCaptureComponent2DInst;
+
 	UFUNCTION(BlueprintCallable, Category = "FACTORY_NETWORK")
 	void SetCustomNetworkManagerActorInst( ACustomNetworkManagerActor* pCustomNetworkManager);
 	
@@ -60,6 +76,11 @@ public:
 	void DoFactoryChangeCameraIndex(int32 clientOrder);
 	//void DoFactoryChangeCameraIndex(_Index clientOrder);
 
+	void CopyData();
+
 	concurrency::concurrent_queue<_PacketType> jobQueue;
+
+	UFUNCTION(BlueprintCallable, Category = "FACTORY_NETWORK")
+	UTextureRenderTarget2D* GetTextureRenderTarget2D();
 private:
 };
