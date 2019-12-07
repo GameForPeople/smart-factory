@@ -193,6 +193,8 @@ void Server::ManagerNetwork()
 
 		if (typeBuffer == MANAGER_PACKET_TYPE::OnOffFactory)
 		{
+			std::cout << "[Manager] onOffFactory! \n";
+
 			OnOffFactory onOffFactory;
 			NETWORK_UTIL::recvn(managerSocket, (char*)& onOffFactory, sizeof(onOffFactory), 0);
 
@@ -200,6 +202,8 @@ void Server::ManagerNetwork()
 		}
 		else if (typeBuffer == MANAGER_PACKET_TYPE::ChangeCamera)
 		{
+			std::cout << "[Manager] ChangeCamera! \n";
+
 			ChangeCamera changeCamera;
 			NETWORK_UTIL::recvn(managerSocket, (char*)& changeCamera, sizeof(changeCamera), 0);
 
@@ -207,6 +211,8 @@ void Server::ManagerNetwork()
 		}
 		else if (typeBuffer == MANAGER_PACKET_TYPE::NeedCameraData)
 		{
+			//	std::cout << "[Manager] NeedCameraData! \n";
+
 			{
 				std::unique_lock<mutex> localLock(cameraDataLock);
 				sendedCameraData = savedCameraData;
@@ -234,6 +240,8 @@ void Server::FactoryNetwork()
 
 		if (typeBuffer == FACTORY_PACKET_TYPE::GetOnOffState)
 		{
+			std::cout << "[Factory] GetOnOffState! \n";
+
 			OnOffFactory onoffFactory;
 			onoffFactory.flag = factoryOnOffFlag;
 
@@ -241,6 +249,9 @@ void Server::FactoryNetwork()
 		}
 		else if (typeBuffer == FACTORY_PACKET_TYPE::GetOrder)
 		{
+			std::cout << "[Factory] GetOrder! \n";
+
+
 			OrderInfo orderInfo;
 			ClientOrder clientOrder;
 			if (clientOrderQueue.try_pop(clientOrder))
@@ -257,6 +268,8 @@ void Server::FactoryNetwork()
 		}
 		else if (typeBuffer == FACTORY_PACKET_TYPE::GetCameraIndex)
 		{
+			std::cout << "[Factory] GetCameraIndex! \n";
+
 			ChangeCamera changeCamera;
 			changeCamera.cameraIndex = savedCameraIndex;
 
@@ -264,6 +277,8 @@ void Server::FactoryNetwork()
 		}
 		else if (typeBuffer == FACTORY_PACKET_TYPE::CameraData)
 		{
+			std::cout << "[Factory] CameraData! \n";
+
 			NETWORK_UTIL::recvn(factorySocket, (char*)& recvedCameraData, sizeof(recvedCameraData), 0);
 			{
 				std::unique_lock<mutex> localLock(cameraDataLock);
