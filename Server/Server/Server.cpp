@@ -32,7 +32,7 @@ Server::Server()
 		}
 	}
 
-	for (int i = 0; i < 90000; ++i)
+	for (int i = 0; i < DEFINE::RENDER_TARGET_X * DEFINE::RENDER_TARGET_Y; ++i)
 	{
 		savedCameraData.colorArr[i * 3] = (char)0;
 		savedCameraData.colorArr[i * 3 + 1] = (char)255;
@@ -235,6 +235,20 @@ void Server::FactoryNetwork()
 			closesocket(factorySocket);
 			factoryFlag = false;
 			std::cout << "[Factory] 팩토리 연결 종료\n";
+
+			for (int i = 0; i < DEFINE::RENDER_TARGET_X; ++i)
+			{
+				for (int j = 0; j < DEFINE::RENDER_TARGET_Y; ++j)
+				{
+					std::cout 
+						<< " X : " << j
+						<< " Y : " << i
+						<< " " << (int)savedCameraData.colorArr[i * DEFINE::RENDER_TARGET_Y + j]
+						<< " " << (int)savedCameraData.colorArr[i * DEFINE::RENDER_TARGET_Y + j + 1]
+						<< " " << (int)savedCameraData.colorArr[i * DEFINE::RENDER_TARGET_Y + j + 2] << " \n";
+				}
+			}
+
 			return;
 		}
 

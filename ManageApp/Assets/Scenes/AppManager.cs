@@ -34,9 +34,9 @@ public class AppManager : MonoBehaviour {
 
     private int nowCameraIndex = 0;
 
-    private Color[] cameraDataBuffer = new Color[90000];
+    private Color[] cameraDataBuffer = new Color[64 * 64 /** 3*/];
     public byte[] dataSendBuffer = new byte[100];
-    public byte[] cameraDataRecvBuffer = new byte[270000];  // [3][300][300]
+    public byte[] cameraDataRecvBuffer = new byte[64 * 64 * 3];  // [3][300][300]
 
     GameObject titleImage;
     GameObject cameraImage;
@@ -186,16 +186,21 @@ public class AppManager : MonoBehaviour {
 
         UnLock();
 
-        for (int i = 0; i < 90000; ++i)
+        for (int i = 0; i < 64 * 64; ++i)
         {
-            cameraDataBuffer[i] = new Color( cameraDataRecvBuffer[3 * i + 0] / 255
-                , cameraDataRecvBuffer[3 * i + 1] / 255
-                , cameraDataRecvBuffer[3 * i + 2] / 255
+            if (i % 64 == 0)
+            {
+                Debug.Log("X : " + (i / 64)  + ", Y : " + (i % 64) + ", R : " + cameraDataRecvBuffer[3 * i + 0] + ", G : " + cameraDataRecvBuffer[3 * i + 1] + ", B : " + cameraDataRecvBuffer[3 * i + 2]);
+            }
+
+            cameraDataBuffer[i] = new Color(cameraDataRecvBuffer[3 * i + 0] / 255.0f
+                , (cameraDataRecvBuffer[3 * i + 1]) / 255.0f
+                , (cameraDataRecvBuffer[3 * i + 2]) / 255.0f
                 , 1);
         }
 
-        tex = new Texture2D(300, 300, TextureFormat.RGB24, false);
-        tex.SetPixels(0, 0, 300, 300, cameraDataBuffer);
+        tex = new Texture2D(64, 64, TextureFormat.RGB24, false);
+        tex.SetPixels(0, 0, 64, 64, cameraDataBuffer);
         cameraImage.GetComponent<Renderer>().material.mainTexture = tex;
         tex.Apply();
     }
