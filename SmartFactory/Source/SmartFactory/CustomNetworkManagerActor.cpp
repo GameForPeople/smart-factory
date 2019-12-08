@@ -18,11 +18,11 @@ void ACustomNetworkManagerActor::BeginPlay()
 	Super::BeginPlay();
 }
 
-//void ACustomNetworkManagerActor::EndPlay(const EEndPlayReason::Type EndPlayReason)
-//{
-//	EndNetwork();
-//	Super::EndPlay(EndPlayReason);
-//}
+void ACustomNetworkManagerActor::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+	//Super::EndPlay(EndPlayReason);
+	EndNetwork();
+}
 
 // Called every frame
 //void ACustomNetworkManagerActor::Tick(float DeltaTime)
@@ -184,6 +184,7 @@ void ACustomNetworkManagerActor::NetworkFunction()
 		else if (popedType == FACTORY_PACKET_TYPE::CameraData)
 		{
 			// customNetworkProcesserInst->CopyData();
+			UE_LOG(LogTemp, Log, TEXT("size %d"), sizeof(cameraData));
 
 			// Send Packet Type
 			send(socket, (char*)&cameraData, sizeof(cameraData), 0);

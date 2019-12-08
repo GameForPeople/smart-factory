@@ -13,12 +13,14 @@ ACustomNetworkProcesser::ACustomNetworkProcesser()
 
 	//texture2DInst = CreateDefaultSubobject<UTexture2D>(TEXT("TEXTURE2D"));
 	//texture2DInst = UTexture2D::CreateTransient(300, 300);
+	
 	textureRenderTarget = CreateDefaultSubobject<UTextureRenderTarget2D>(TEXT("TEXTURE2D")); // UTextureRenderTarget2D::CreateResource();
 	textureRenderTarget->ResizeTarget(300, 300);
-	textureRenderTarget->ConstructTexture2D(texture2DInst, "TEX_2D", EObjectFlags::RF_Public);
+	texture2DInst = textureRenderTarget->ConstructTexture2D(texture2DInst, "TEX_2D", EObjectFlags::RF_Public);
 
 	//sceneCaptureComponent2DInst = CreateDefaultSubobject<USceneCaptureComponent2D>(TEXT("SceneCapture2d_custom"));
 	//sceneCaptureComponent2DInst->TextureTarget = textureRenderTarget;
+
 }
 
 // Called when the game starts or when spawned
@@ -31,7 +33,11 @@ void ACustomNetworkProcesser::BeginPlay()
 void ACustomNetworkProcesser::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+}
 
+/////////////////////////////////////////////////////
+void ACustomNetworkProcesser::CustomTick()
+{
 	if (!isOnTick) { return; }
 
 	_PacketType retPacket;
@@ -64,7 +70,6 @@ void ACustomNetworkProcesser::Tick(float DeltaTime)
 	customNetworkManagerActorInst->AddFactoryCameraData();
 }
 
-/////////////////////////////////////////////////////
 void ACustomNetworkProcesser::SetCustomNetworkManagerActorInst(ACustomNetworkManagerActor* pCustomNetworkManagerActorInst)
 {
 	customNetworkManagerActorInst = pCustomNetworkManagerActorInst;
@@ -84,11 +89,11 @@ void ACustomNetworkProcesser::CopyData()
 
 	const FColor* FormatedImageData = static_cast<const FColor*>(texture2DInst->PlatformData->Mips[0].BulkData.LockReadOnly());
 
-	for (int32 X = 0; X < texture2DInst->GetSizeX(); X++)
+	for (int32 X = 0; X < /*texture2DInst->GetSizeX()*/ 64; X++)
 	{
-		for (int32 Y = 0; Y < texture2DInst->GetSizeY(); Y++)
+		for (int32 Y = 0; Y < /*texture2DInst->GetSizeY()*/ 64; Y++)
 		{
-			int tempIndex = Y * texture2DInst->GetSizeX() + X;
+			int tempIndex = Y * /*texture2DInst->GetSizeX()*/ 64 + X;
 			customNetworkManagerActorInst->cameraData[tempIndex] = FormatedImageData[tempIndex].R;
 
 			++tempIndex;
@@ -107,6 +112,12 @@ void ACustomNetworkProcesser::CopyData()
 	texture2DInst->MipGenSettings = OldMipGenSettings;
 	texture2DInst->SRGB = OldSRGB;
 	texture2DInst->UpdateUnrealResource();
+}
+
+void ACustomNetworkProcesser::SetPixel(int32 index, uint8 pixelValue)
+{
+	UE_LOG(LogTemp, Log, TEXT("%d %d"), index, pixelValue);
+	customNetworkManagerActorInst->cameraData[index] = pixelValue;
 }
 
 UTextureRenderTarget2D* ACustomNetworkProcesser::GetTextureRenderTarget2D()

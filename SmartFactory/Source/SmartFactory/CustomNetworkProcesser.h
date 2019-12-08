@@ -78,6 +78,12 @@ public:
 
 	void CopyData();
 
+	UFUNCTION(BlueprintCallable, Category = "FACTORY_NETWORK")
+	void SetPixel(int32 index, uint8 pixelValue);
+
+	UFUNCTION(BlueprintCallable, Category = "FACTORY_NETWORK")
+	void CustomTick();
+
 	concurrency::concurrent_queue<_PacketType> jobQueue;
 
 	UFUNCTION(BlueprintCallable, Category = "FACTORY_NETWORK")
