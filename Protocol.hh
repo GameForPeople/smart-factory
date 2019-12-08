@@ -1,5 +1,12 @@
 #pragma once
 
+namespace DEFINE
+{
+	static constexpr int COMMON_PASSWORD = 19942019;
+	static constexpr int RENDER_TARGET_X = 64;
+	static constexpr int RENDER_TARGET_Y = 64;
+}
+
 namespace USING
 {
 	using _Flag = char; // bool;
@@ -19,14 +26,10 @@ namespace USING
 	using _Price = int;
 
 	//using _Color = char[3];
-	using _CameraDataType = char[3 * 300 * 300];
+	using _CameraDataType = char[3 * DEFINE::RENDER_TARGET_X * DEFINE::RENDER_TARGET_Y];
 
 }using namespace USING;
 
-namespace DEFINE
-{
-	static constexpr _Password COMMON_PASSWORD = 19942019;
-}
 
 namespace CLIENT_TYPE
 {
