@@ -42,6 +42,32 @@ public class AppManager : MonoBehaviour {
     GameObject cameraImage;
     GameObject loginImage;
 
+    Text totalOrder;
+    int totalOrderCount = 21;
+
+    Text carType;
+    Text colorType;
+    Text tireType;
+
+    Text textBlack;
+    int blackCount = 6;
+
+    Text textWhite;
+    int whiteCount = 3;
+
+    Text textRed;
+    int redCount = 5;
+
+    Text textBlue;
+    int blueCount = 4;
+
+    Text textGreen;
+    int greenCount = 0;
+
+    Text textYellow;
+    int yellowCount = 3;
+
+
     Texture2D tex;
 
     enum CLIENT_TYPE : byte
@@ -56,6 +82,7 @@ public class AppManager : MonoBehaviour {
           OnOffFactory = 0
         , ChangeCamera = 1
         , NeedCameraData = 2
+        , NeedUserData = 3
     };
 
     // Use this for initialization
@@ -74,6 +101,17 @@ public class AppManager : MonoBehaviour {
 
         loginImage = GameObject.Find("OnOff_Login").transform.Find("LOGIN_UI").gameObject;
         loginImage.SetActive(true);
+
+        totalOrder = GameObject.Find("Text_Count").GetComponent<Text>();
+        carType = GameObject.Find("Text_CarType").GetComponent<Text>();
+        colorType = GameObject.Find("Text_ColorType").GetComponent<Text>();
+        tireType = GameObject.Find("Text_TireType").GetComponent<Text>();
+        textBlack = GameObject.Find("Text_Black").GetComponent<Text>();
+        textWhite = GameObject.Find("Text_White").GetComponent<Text>();
+        textRed = GameObject.Find("Text_Red").GetComponent<Text>();
+        textBlue = GameObject.Find("Text_Blue").GetComponent<Text>();
+        textGreen = GameObject.Find("Text_Green").GetComponent<Text>();
+        textYellow = GameObject.Find("Text_Yellow").GetComponent<Text>();
 
         StartCoroutine(TitleCoroutine());
     }
@@ -205,6 +243,72 @@ public class AppManager : MonoBehaviour {
         tex.Apply();
     }
 
+    void ProcessClientOrder()
+    {
+        Lock();
+
+        //Buffer.BlockCopy(BitConverter.GetBytes(PROTOCOL_TYPE.NeedCameraData), 0, dataSendBuffer, 0, 1);
+        dataSendBuffer[0] = (byte)(PROTOCOL_TYPE.NeedUserData);
+        socket.Send(dataSendBuffer, 1, SocketFlags.None);
+
+        try
+        {
+            socket.Receive(cameraDataRecvBuffer);
+        }
+        catch (SocketException SCE)
+        {
+            Debug.Log("Socket connect error! : " + SCE.ToString());
+            Quit();
+            return;
+        }
+
+        UnLock();
+
+        if(cameraDataRecvBuffer[0] == (byte)(0))
+        {
+            return;
+        }
+
+        int carTypeBuffer = (int)cameraDataRecvBuffer[1];
+        int colorTypeBuffer = (int)cameraDataRecvBuffer[2];
+        int tireTypeBuffer = (int)cameraDataRecvBuffer[3];
+
+        carType.text = carTypeBuffer.ToString();
+        colorType.text = colorTypeBuffer.ToString();
+        tireType.text = tireTypeBuffer.ToString();
+
+        ++totalOrderCount;
+        totalOrder.text = totalOrderCount.ToString();
+
+        switch(colorTypeBuffer)
+        {
+            case 0:
+                ++blackCount;
+                textBlack.text = blackCount.ToString();
+                break;
+            case 1:
+                ++whiteCount;
+                textWhite.text = whiteCount.ToString();
+                break;
+            case 2:
+                ++redCount;
+                textRed.text = redCount.ToString();
+                break;
+            case 3:
+                ++blueCount;
+                textBlue.text = blueCount.ToString();
+                break;
+            case 4:
+                ++greenCount;
+                textGreen.text = greenCount.ToString();
+                break;
+            case 5:
+                ++yellowCount;
+                textYellow.text = yellowCount.ToString();
+                break;
+        }
+    }
+
     public void ProcessOnOff(bool isOnOff)
     {
         if (!isOnNetwork) { return; }
@@ -245,6 +349,6 @@ public class AppManager : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-        if (isOnNetwork) { ProcessCameraData(); }
+        if (isOnNetwork) { ProcessClientOrder(); }
     }
 }
