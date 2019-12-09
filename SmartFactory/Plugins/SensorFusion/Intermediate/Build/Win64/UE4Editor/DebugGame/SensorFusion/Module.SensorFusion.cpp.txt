@@ -1,0 +1,270 @@
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Intermediate\Build\Win64\UE4Editor\DebugGame\SensorFusion\Definitions.SensorFusion.h
+D:/Github/KPU_Advanced-graphics-effects/SensorFusionPlugin_4_23/Plugins/SensorFusion/Source/SensorFusion/glm/detail/dummy.cpp
+D:/Github/KPU_Advanced-graphics-effects/SensorFusionPlugin_4_23/Plugins/SensorFusion/Source/SensorFusion/glm/detail/glm.cpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm/glm.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail/_fixes.hpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cmath
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xtgmath.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\climits
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cfloat
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\limits
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cwchar
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cstdio
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cassert
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\assert.h
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\fwd.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail/type_int.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\setup.hpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cassert
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\assert.h
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\../simd/platform.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cstdint
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail/type_float.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail/type_vec.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\precision.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail/type_mat.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\vec2.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail/type_vec2.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\type_vec2.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\vec3.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail/type_vec3.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\type_vec3.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\vec4.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail/type_vec4.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\type_vec4.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\type_vec4_simd.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\mat2x2.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail/type_mat2x2.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\type_mat2x2.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\func_matrix.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\../mat2x3.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail/type_mat2x3.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\type_mat2x3.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\../mat2x4.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail/type_mat2x4.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\type_mat2x4.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\../mat3x2.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail/type_mat3x2.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\type_mat3x2.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\../mat3x3.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail/type_mat3x3.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\type_mat3x3.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\../mat3x4.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail/type_mat3x4.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\type_mat3x4.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\../mat4x2.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail/type_mat4x2.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\type_mat4x2.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\../mat4x3.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail/type_mat4x3.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\type_mat4x3.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\../mat4x4.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail/type_mat4x4.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\type_mat4x4.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\type_mat4x4_simd.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\func_matrix.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\../geometric.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail/func_geometric.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\func_geometric.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\func_exponential.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\type_vec1.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\type_vec1.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\func_exponential.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\func_vector_relational.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\func_vector_relational.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\func_vector_relational_simd.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\_vectorize.hpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cassert
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\assert.h
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\func_exponential_simd.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\../simd/exponential.h
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\func_common.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\_fixes.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\func_common.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\func_common_simd.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\../simd/common.h
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\func_geometric_simd.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\../simd/geometric.h
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\func_matrix_simd.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\../simd/matrix.h
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\trigonometric.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail/func_trigonometric.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\func_trigonometric.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\func_trigonometric_simd.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\exponential.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\common.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\packing.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail/func_packing.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\func_packing.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\type_half.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\type_half.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\func_packing_simd.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\matrix.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\vector_relational.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\integer.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail/func_integer.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\func_integer.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\func_integer_simd.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\detail\../simd/integer.h
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm/gtc/quaternion.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\gtc\../gtc/constants.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\gtc\constants.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\gtc\quaternion.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\gtc\quaternion_simd.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm/gtx/dual_quaternion.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\gtx\dual_quaternion.inl
+D:/Github/KPU_Advanced-graphics-effects/SensorFusionPlugin_4_23/Plugins/SensorFusion/Source/SensorFusion/Private/Sensor.cpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\Public\Sensor.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\iostream
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\istream
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\ostream
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\ios
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xlocnum
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\streambuf
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xiosbase
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\share.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\system_error
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cerrno
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\stdexcept
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xstring
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\iosfwd
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cstring
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xmemory
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xutility
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\utility
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xcall_once.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xerrc.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xlocale
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\memory
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\typeinfo
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\vcruntime_typeinfo.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xfacet
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xlocinfo
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xlocinfo.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\locale.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\string
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cctype
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\Windows.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\sdkddkver.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\excpt.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\windef.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\minwindef.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\winnt.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\kernelspecs.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\basetsd.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\guiddef.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack8.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack1.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack1.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\apiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\ktmtypes.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\winbase.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\apisetcconv.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\minwinbase.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\processenv.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\fileapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\debugapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\utilapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\handleapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\errhandlingapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\fibersapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\namedpipeapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\profileapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\heapapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\ioapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\synchapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\interlockedapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\processthreadsapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\sysinfoapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\memoryapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\enclaveapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\threadpoollegacyapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\threadpoolapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\jobapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\jobapi2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\wow64apiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\libloaderapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\securitybaseapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\namespaceapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\systemtopologyapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\processtopologyapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\securityappcontainer.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\realtimeapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\winerror.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\timezoneapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\wingdi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack1.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\winuser.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\tvout.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\winnls.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\datetimeapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\stringapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\winnls.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\wincon.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\consoleapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\winver.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\verrsrc.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\winreg.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\reason.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\winnetwk.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\wnnc.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\stralign.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\winsvc.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\mcx.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\imm.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um\ime_cmodes.h
+D:/Github/KPU_Advanced-graphics-effects/SensorFusionPlugin_4_23/Plugins/SensorFusion/Source/SensorFusion/Private/SensorData.cpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\Public\SensorData.h
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm/gtc/matrix_transform.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\gtc\matrix_transform.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm/gtx/euler_angles.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\gtx\euler_angles.inl
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\gtx\compatibility.hpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\glm\gtx\compatibility.inl
+D:/Github/KPU_Advanced-graphics-effects/SensorFusionPlugin_4_23/Plugins/SensorFusion/Source/SensorFusion/Private/SensorFusion.cpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\Public\SensorFusion.h
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\Public\SensorFusionSettings.h
+D:\unreal\Epic Games\UE_4.23\Engine\Source\Runtime\CoreUObject\Public\UObject/NoExportTypes.h
+D:\unreal\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Math/UnitConversion.h
+D:\unreal\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Math/UnitConversion.inl
+D:\unreal\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Internationalization/PolyglotTextData.h
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Intermediate\Build\Win64\UE4Editor\Inc\SensorFusion\SensorFusionSettings.generated.h
+D:\unreal\Epic Games\UE_4.23\Engine\Source\Developer\Settings\Public\ISettingsModule.h
+D:\unreal\Epic Games\UE_4.23\Engine\Source\Developer\Settings\Public\ISettingsSection.h
+D:\unreal\Epic Games\UE_4.23\Engine\Source\Developer\Settings\Public\ISettingsContainer.h
+D:/Github/KPU_Advanced-graphics-effects/SensorFusionPlugin_4_23/Plugins/SensorFusion/Source/SensorFusion/Private/SensorFusionBPLibrary.cpp
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\Public\SensorFusionBPLibrary.h
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Intermediate\Build\Win64\UE4Editor\Inc\SensorFusion\SensorFusionBPLibrary.generated.h
+D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Source\SensorFusion\Public\SensorFusionEngine.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\vector
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\map
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\tuple
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xtree
+D:/Github/KPU_Advanced-graphics-effects/SensorFusionPlugin_4_23/Plugins/SensorFusion/Source/SensorFusion/Private/SensorFusionEngine.cpp
+D:/Github/KPU_Advanced-graphics-effects/SensorFusionPlugin_4_23/Plugins/SensorFusion/Source/SensorFusion/Private/SensorFusionSettings.cpp

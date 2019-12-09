@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-SensorFusion-Win64-DebugGame.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Intermediate\Build\Win64\SensorFusionPluginEditor\DebugGame\Engine\SharedPCH.Engine.NonOptimized.h.obj"
+"D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Intermediate\Build\Win64\UE4Editor\DebugGame\SensorFusion\Module.SensorFusion.cpp.obj"
+"D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Intermediate\Build\Win64\UE4Editor\DebugGame\SensorFusion\Module.SensorFusion.gen.cpp.obj"
+"D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Intermediate\Build\Win64\UE4Editor\DebugGame\SensorFusion\Default.rc2.res"
+/OUT:"D:\Github\KPU_Advanced-graphics-effects\SensorFusionPlugin_4_23\Plugins\SensorFusion\Intermediate\Build\Win64\UE4Editor\DebugGame\SensorFusion\UE4Editor-SensorFusion-Win64-DebugGame.lib"
+/INCLUDE:IMPLEMENT_MODULE_SensorFusion

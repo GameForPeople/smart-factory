@@ -1,0 +1,20 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SensorFusion.cpp.obj": [
+			"dummy.cpp.obj",
+			"glm.cpp.obj",
+			"Sensor.cpp.obj",
+			"SensorData.cpp.obj",
+			"SensorFusion.cpp.obj",
+			"SensorFusionBPLibrary.cpp.obj",
+			"SensorFusionEngine.cpp.obj",
+			"SensorFusionSettings.cpp.obj"
+		],
+		"Module.SensorFusion.gen.cpp.obj": [
+			"SensorFusion.init.gen.cpp.obj",
+			"SensorFusionBPLibrary.gen.cpp.obj",
+			"SensorFusionSettings.gen.cpp.obj"
+		]
+	}
+}
