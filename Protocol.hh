@@ -47,8 +47,9 @@ namespace MANAGER_PACKET_TYPE
 	enum : char
 	{
 		  OnOffFactory = 0
-		, ChangeCamera = 1
-		, NeedCameraData = 2
+		, ChangeCamera = 1	// delete
+		, NeedCameraData = 2 // delete
+		, NeedClientOrder = 3
 	};
 }
 
@@ -113,6 +114,10 @@ struct ChangeCamera
 struct CameraData
 {
 	_CameraDataType colorArr;
+};
+
+struct InitInfo
+{
 };
 
 #pragma pack(pop)

@@ -34,6 +34,9 @@ private:
 
 private:
 	concurrency::concurrent_queue<ClientOrder> clientOrderQueue;
+	concurrency::concurrent_queue<ClientOrder> managerClientOrderQueue;
+	std::atomic<int> clientOrderCount;
+
 	std::atomic<bool> factoryOnOffFlag;
 
 	std::mutex cameraDataLock;

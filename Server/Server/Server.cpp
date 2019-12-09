@@ -11,6 +11,8 @@ Server::Server()
 	, factoryFlag(false)
 	, factorySocket()
 	, clientOrderQueue()
+	, managerClientOrderQueue()
+	, clientOrderCount()
 	, factoryOnOffFlag(false)
 	, cameraDataLock()
 	, savedCameraData()
@@ -139,6 +141,8 @@ void Server::Run()
 			);
 
 			clientOrderQueue.push(clientOrder);
+			managerClientOrderQueue.push(clientOrder);
+			++clientOrderCount;
 			closesocket(clientSocket);
 		}
 		else if (auth.clientType == CLIENT_TYPE::Manager)
@@ -220,6 +224,23 @@ void Server::ManagerNetwork()
 
 			send(managerSocket, (char*)& sendedCameraData, sizeof(sendedCameraData), 0);
 		}
+		else if (typeBuffer == MANAGER_PACKET_TYPE::NeedClientOrder)
+		{
+			//	std::cout << "[Manager] NeedCameraData! \n";
+			OrderInfo orderInfo;
+			ClientOrder clientOrder;
+			if (managerClientOrderQueue.try_pop(clientOrder))
+			{
+				orderInfo.flag = true;
+				orderInfo.clientOrder = clientOrder;
+			}
+			else
+			{
+				orderInfo.flag = false;
+			}
+
+			send(managerSocket, (char*)&orderInfo, sizeof(orderInfo), 0);
+		}
 	}
 }
 
@@ -264,7 +285,6 @@ void Server::FactoryNetwork()
 		else if (typeBuffer == FACTORY_PACKET_TYPE::GetOrder)
 		{
 			std::cout << "[Factory] GetOrder! \n";
-
 
 			OrderInfo orderInfo;
 			ClientOrder clientOrder;
