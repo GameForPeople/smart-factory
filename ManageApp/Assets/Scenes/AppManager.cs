@@ -41,6 +41,7 @@ public class AppManager : MonoBehaviour {
     GameObject titleImage;
     GameObject cameraImage;
     GameObject loginImage;
+    GameObject newOrderImage;
 
     Text totalOrder;
     int totalOrderCount = 21;
@@ -101,6 +102,9 @@ public class AppManager : MonoBehaviour {
 
         loginImage = GameObject.Find("OnOff_Login").transform.Find("LOGIN_UI").gameObject;
         loginImage.SetActive(true);
+
+        newOrderImage = GameObject.Find("NewOrder").transform.Find("NewOrderBack").gameObject;
+        newOrderImage.SetActive(false);
 
         totalOrder = GameObject.Find("Text_Count").GetComponent<Text>();
         carType = GameObject.Find("Text_CarType").GetComponent<Text>();
@@ -269,6 +273,8 @@ public class AppManager : MonoBehaviour {
             return;
         }
 
+        StartCoroutine(NewOrderCoroutine());
+
         int carTypeBuffer = (int)cameraDataRecvBuffer[1];
         int colorTypeBuffer = (int)cameraDataRecvBuffer[2];
         int tireTypeBuffer = (int)cameraDataRecvBuffer[3];
@@ -307,6 +313,15 @@ public class AppManager : MonoBehaviour {
                 textYellow.text = yellowCount.ToString();
                 break;
         }
+    }
+
+    public IEnumerator NewOrderCoroutine()
+    {
+        newOrderImage.SetActive(true);
+
+        yield return new WaitForSeconds(1.0f);
+
+        newOrderImage.SetActive(false);
     }
 
     public void ProcessOnOff(bool isOnOff)
