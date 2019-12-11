@@ -2,6 +2,8 @@
 
 #include "../../Protocol.hh"
 
+#define SELF_TEST_MODE
+
 class Server
 {
 	_INLINE static constexpr unsigned short SERVER_LISTEN_PORT = 9000;
@@ -31,6 +33,10 @@ private:
 	std::thread factoryNetworkThread;
 	std::atomic<bool> factoryFlag;
 	SOCKET factorySocket;
+
+#ifdef SELF_TEST_MODE
+	std::thread selfTestThread;
+#endif
 
 private:
 	concurrency::concurrent_queue<ClientOrder> clientOrderQueue;

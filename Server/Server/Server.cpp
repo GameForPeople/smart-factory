@@ -19,6 +19,9 @@ Server::Server()
 	, recvedCameraData()
 	, sendedCameraData()
 	, savedCameraIndex(0)
+#ifdef SELF_TEST_MODE
+	, selfTestThread()
+#endif
 {
 	{
 		std::cout << "사용하실 IP를 입력해주세요. \n"
@@ -48,6 +51,10 @@ Server::~Server()
 {
 	// if (managerFlag) { closesocket(managerSocket); managerNetworkThread.join(); }
 	// if (factoryFlag) { closesocket(factorySocket); factoryNetworkThread.join(); }
+
+#ifdef SELF_TEST_MODE
+	selfTestThread.join();
+#endif
 }
 
 void Server::Init()
@@ -105,6 +112,33 @@ void Server::Run()
 	SOCKADDR_IN clientAddr;
 	int addrLen = sizeof(clientAddr);
 
+#ifdef SELF_TEST_MODE
+	selfTestThread = static_cast<std::thread>([&]() noexcept ->auto
+	{
+		int inputtedCommand{ 0 };
+		while (7)
+		{
+			std::cout << "테스트 사항 선택 : 0. ClientInfo 추가 \n";
+			std::cin >> inputtedCommand;
+
+			ClientOrder clientOrder;
+			clientOrder.carType = rand() % 3;
+			clientOrder.colorType = rand() % 6;
+			clientOrder.tireType = rand() % 3;
+
+			std::wprintf(L"[Test] 테스트 오더를 등록했습니다. 차종 %d, 차색 %d, 타이어 %d"
+				, (int)(clientOrder.carType)
+				, (int)(clientOrder.colorType)
+				, (int)(clientOrder.tireType)
+			);
+
+			clientOrderQueue.push(clientOrder);
+			managerClientOrderQueue.push(clientOrder);
+			++clientOrderCount;
+		}
+	});
+#endif
+
 	while (7)
 	{
 		if (clientSocket = accept(listenSocket, (SOCKADDR*)& clientAddr, &addrLen)
@@ -141,8 +175,7 @@ void Server::Run()
 			);
 
 			clientOrderQueue.push(clientOrder);
-			managerClientOrderQueue.push(clientOrder);
-			++clientOrderCount;
+
 			closesocket(clientSocket);
 		}
 		else if (auth.clientType == CLIENT_TYPE::Manager)
@@ -292,6 +325,11 @@ void Server::FactoryNetwork()
 			{
 				orderInfo.flag = true;
 				orderInfo.clientOrder = clientOrder;
+
+#ifndef SELF_TEST_MODE
+				managerClientOrderQueue.push(clientOrder);
+				++clientOrderCount;
+#endif
 			}
 			else
 			{
