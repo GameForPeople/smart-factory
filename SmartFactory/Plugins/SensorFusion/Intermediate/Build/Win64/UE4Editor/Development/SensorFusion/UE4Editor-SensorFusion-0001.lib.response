@@ -3,7 +3,7 @@
 /MACHINE:x64
 /SUBSYSTEM:WINDOWS
 /DEF
-/NAME:"UE4Editor-SensorFusion.dll"
+/NAME:"UE4Editor-SensorFusion-0001.dll"
 /IGNORE:4221
 /NODEFAULTLIB
 "D:\Github\smart-factory\SmartFactory\Intermediate\Build\Win64\SmartFactoryEditor\Development\Engine\SharedPCH.Engine.h.obj"
@@ -11,5 +11,5 @@
 "D:\Github\smart-factory\SmartFactory\Plugins\SensorFusion\Intermediate\Build\Win64\UE4Editor\Development\SensorFusion\Module.SensorFusion.cpp.obj"
 "D:\Github\smart-factory\SmartFactory\Plugins\SensorFusion\Intermediate\Build\Win64\UE4Editor\Development\SensorFusion\Module.SensorFusion.gen.cpp.obj"
 "D:\Github\smart-factory\SmartFactory\Plugins\SensorFusion\Intermediate\Build\Win64\UE4Editor\Development\SensorFusion\Default.rc2.res"
-/OUT:"D:\Github\smart-factory\SmartFactory\Plugins\SensorFusion\Intermediate\Build\Win64\UE4Editor\Development\SensorFusion\UE4Editor-SensorFusion.lib"
+/OUT:"D:\Github\smart-factory\SmartFactory\Plugins\SensorFusion\Intermediate\Build\Win64\UE4Editor\Development\SensorFusion\UE4Editor-SensorFusion-0001.lib"
 /INCLUDE:IMPLEMENT_MODULE_SensorFusion

@@ -3,9 +3,9 @@
 #include "SensorFusion.h"
 
 #include "SensorFusionSettings.h"
-#include "ISettingsModule.h"
-#include "ISettingsSection.h"
-#include "ISettingsContainer.h"
+#include "Developer/Settings/Public/ISettingsModule.h"
+#include "Developer/Settings/Public/ISettingsSection.h"
+#include "Developer/Settings/Public/ISettingsContainer.h"
 
 #ifdef LOAD_DLL
 #include "IPluginManager.h"

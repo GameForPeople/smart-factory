@@ -2,6 +2,8 @@
 
 #pragma once
 
+#pragma warning(disable:4530)
+
 // c++ Header
 #include <thread>
 #include <string>
@@ -13,12 +15,11 @@
 #include "CustomClientInfo.h"
 #include "../../Protocol.hh"
 
-#include "Engine/Texture.h"
-#include "Engine/Texture2D.h"
-#include "Engine/Texture2DDynamic.h"
-#include "Engine/TextureRenderTarget2D.h"
-
-#include "Components/SceneCaptureComponent2D.h"
+// #include "Engine/Texture.h"
+// #include "Engine/Texture2D.h"
+// #include "Engine/Texture2DDynamic.h"
+// #include "Engine/TextureRenderTarget2D.h"
+// #include "Components/SceneCaptureComponent2D.h"
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
@@ -48,12 +49,12 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	ACustomNetworkManagerActor* customNetworkManagerActorInst;
-	
-	UPROPERTY(EditAnywhere)
-	UTextureRenderTarget2D* textureRenderTarget;
-	
-	UPROPERTY(EditAnywhere)
-	UTexture2D* texture2DInst;
+	// 
+	// UPROPERTY(EditAnywhere)
+	// UTextureRenderTarget2D* textureRenderTarget;
+	// 
+	// UPROPERTY(EditAnywhere)
+	// UTexture2D* texture2DInst;
 
 	//UPROPERTY(EditAnywhere)
 	//USceneCaptureComponent2D* sceneCaptureComponent2DInst;
@@ -86,7 +87,9 @@ public:
 
 	concurrency::concurrent_queue<_PacketType> jobQueue;
 
-	UFUNCTION(BlueprintCallable, Category = "FACTORY_NETWORK")
-	UTextureRenderTarget2D* GetTextureRenderTarget2D();
+	// UFUNCTION(BlueprintCallable, Category = "FACTORY_NETWORK")
+	// UTextureRenderTarget2D* GetTextureRenderTarget2D();
+
 private:
+
 };

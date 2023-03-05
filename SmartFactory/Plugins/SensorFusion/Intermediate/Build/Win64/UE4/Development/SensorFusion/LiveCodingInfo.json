@@ -6,10 +6,10 @@
 			"glm.cpp.obj",
 			"Sensor.cpp.obj",
 			"SensorData.cpp.obj",
+			"SensorFusion.cpp.obj",
 			"SensorFusionBPLibrary.cpp.obj",
 			"SensorFusionEngine.cpp.obj",
-			"SensorFusionSettings.cpp.obj",
-			"SensorFusion.cpp.obj"
+			"SensorFusionSettings.cpp.obj"
 		],
 		"Module.SensorFusion.gen.cpp.obj": [
 			"SensorFusion.init.gen.cpp.obj",

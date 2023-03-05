@@ -2,6 +2,8 @@
 
 #pragma once
 
+#pragma warning(disable:4530)
+
 // c++ Header
 #include <thread>
 #include <string>

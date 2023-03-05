@@ -1,4 +1,4 @@
-D:\Github\smart-factory\SmartFactory\Plugins\SensorFusion\Intermediate\Build\Win64\UE4Editor\Development\SensorFusion\Definitions.SensorFusion.h
+D:\Github\smart-factory\SmartFactory\Plugins\SensorFusion\Intermediate\Build\Win64\UE4\Shipping\SensorFusion\Definitions.SensorFusion.h
 D:/Github/smart-factory/SmartFactory/Plugins/SensorFusion/Source/SensorFusion/glm/detail/dummy.cpp
 D:/Github/smart-factory/SmartFactory/Plugins/SensorFusion/Source/SensorFusion/glm/detail/glm.cpp
 D:\Github\smart-factory\SmartFactory\Plugins\SensorFusion\Source\SensorFusion\glm/glm.hpp
@@ -130,6 +130,7 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\iosfwd
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cstring
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xmemory
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xatomic.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xutility
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\utility
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xcall_once.h
@@ -138,6 +139,9 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\memory
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\typeinfo
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\vcruntime_typeinfo.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\vcruntime_exception.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\eh.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\corecrt_terminate.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xfacet
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xlocinfo
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xlocinfo.h
@@ -249,7 +253,7 @@ D:\Github\smart-factory\SmartFactory\Plugins\SensorFusion\Source\SensorFusion\gl
 D:\Github\smart-factory\SmartFactory\Plugins\SensorFusion\Source\SensorFusion\glm\gtx\compatibility.inl
 D:/Github/smart-factory/SmartFactory/Plugins/SensorFusion/Source/SensorFusion/Private/SensorFusionBPLibrary.cpp
 D:\Github\smart-factory\SmartFactory\Plugins\SensorFusion\Source\SensorFusion\Public\SensorFusionBPLibrary.h
-D:\Github\smart-factory\SmartFactory\Plugins\SensorFusion\Intermediate\Build\Win64\UE4Editor\Inc\SensorFusion\SensorFusionBPLibrary.generated.h
+D:\Github\smart-factory\SmartFactory\Plugins\SensorFusion\Intermediate\Build\Win64\UE4\Inc\SensorFusion\SensorFusionBPLibrary.generated.h
 D:\Github\smart-factory\SmartFactory\Plugins\SensorFusion\Source\SensorFusion\Public\SensorFusionEngine.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\vector
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\map
@@ -261,5 +265,5 @@ D:\unreal\Epic Games\UE_4.23\Engine\Source\Runtime\CoreUObject\Public\UObject/No
 D:\unreal\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Math/UnitConversion.h
 D:\unreal\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Math/UnitConversion.inl
 D:\unreal\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Internationalization/PolyglotTextData.h
-D:\Github\smart-factory\SmartFactory\Plugins\SensorFusion\Intermediate\Build\Win64\UE4Editor\Inc\SensorFusion\SensorFusionSettings.generated.h
+D:\Github\smart-factory\SmartFactory\Plugins\SensorFusion\Intermediate\Build\Win64\UE4\Inc\SensorFusion\SensorFusionSettings.generated.h
 D:/Github/smart-factory/SmartFactory/Plugins/SensorFusion/Source/SensorFusion/Private/SensorFusionSettings.cpp
